@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 476814167}
   - component: {fileID: 476814166}
   - component: {fileID: 476814165}
+  - component: {fileID: 476814168}
   - component: {fileID: 476814164}
   m_Layer: 0
   m_Name: Circle
@@ -235,6 +236,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hp: 10
+  Max: 1.5
+  speed: 3
 --- !u!212 &476814166
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -296,12 +299,28 @@ Transform:
   m_GameObject: {fileID: 476814163}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: 3.42, z: 0}
+  m_LocalPosition: {x: 0, y: 3.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &476814168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476814163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20d87b7b26115374193183e5c0a72e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletPrefab: {fileID: 3500828955304975834, guid: daaee2df828c6bb4c9fae819682bd716, type: 3}
+  Bullet_Speed: 10
+  BulletHow: 3
+  AngleDiffrent: 15
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,10 +575,11 @@ Transform:
   m_GameObject: {fileID: 601265804}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.045977015, y: -1.7701149, z: 0}
+  m_LocalPosition: {x: 0, y: -1.7701149, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1034559858}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &601265810
@@ -726,11 +746,11 @@ Transform:
   m_GameObject: {fileID: 1034559853}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.36925516, w: 0.9293281}
-  m_LocalPosition: {x: 0.045977015, y: -1.7701149, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 601265809}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 43.339}
 --- !u!114 &1034559859
 MonoBehaviour:
@@ -745,7 +765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atk: 0
-  target: {fileID: 0}
+  target: {fileID: 476814167}
   rotation_speed: 4
   speed: 8
 --- !u!1660057539 &9223372036854775807
@@ -755,5 +775,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 601265809}
   - {fileID: 476814167}
-  - {fileID: 1034559858}
   - {fileID: 137865898}
